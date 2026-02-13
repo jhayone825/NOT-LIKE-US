@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🅽🅾️🆃 🅻🅸🅺🅴.🆄🆂 | Official Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff4b2b;
+            --accent: #00f2ff;
+            --glass: rgba(0, 0, 0, 0.8);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body, html {
+            height: 100%;
+            font-family: 'Rajdhani', sans-serif;
+            overflow: hidden;
+            background: #000;
+        }
+
+        /* Video Background Overlay */
+        #video-bg {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -2;
+            filter: brightness(0.4) grayscale(0.3);
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(45deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 100%);
+            z-index: -1;
+        }
+
+        .main-container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .portal-card {
+            width: 100%;
+            max-width: 450px;
+            background: var(--glass);
+            border: 1px solid rgba(255, 75, 43, 0.3);
+            border-radius: 5px;
+            padding: 30px;
+            box-shadow: 0 0 30px rgba(255, 75, 43, 0.2);
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Scanline Effect */
+        .portal-card::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 2px;
+            background: var(--primary);
+            opacity: 0.5;
+            animation: scan 4s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { top: 0; }
+            100% { top: 100%; }
+        }
+
+        .header { text-align: center; margin-bottom: 25px; }
+        .logo { 
+            width: 90px; height: 90px; 
+            border-radius: 50%; 
+            border: 2px solid var(--primary);
+            margin-bottom: 10px;
+            box-shadow: 0 0 15px var(--primary);
+        }
+
+        h1 { 
+            font-family: 'Orbitron', sans-serif; 
+            font-size: 1.4rem; 
+            color: #fff; 
+            text-shadow: 0 0 10px var(--primary);
+        }
+
+        .step { display: none; }
+        .active { display: block; animation: slideIn 0.4s ease-out; }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .rules-box {
+            background: rgba(255,255,255,0.05);
+            padding: 15px;
+            height: 200px;
+            overflow-y: auto;
+            border: 1px solid #333;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: #ddd;
+        }
+
+        .rules-box b { color: var(--primary); }
+
+        .input-group { margin-bottom: 15px; }
+        label { font-size: 0.75rem; color: var(--primary); text-transform: uppercase; display: block; margin-bottom: 5px; }
+        input {
+            width: 100%;
+            padding: 10px;
+            background: #111;
+            border: 1px solid #444;
+            color: #fff;
+            border-radius: 3px;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        input:focus { border-color: var(--accent); outline: none; }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.9rem;
+            cursor: pointer;
+            clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+            transition: 0.3s;
+        }
+
+        .btn:hover { background: #fff; color: #000; }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+
+    <video autoplay muted loop id="video-bg">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-fire-explosions-and-sparks-in-the-night-41551-large.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+
+    <div class="main-container">
+        <div class="portal-card">
+            <div class="header">
+                <img src="https://i.ibb.co/B078MgX/IMG-6291.jpg" alt="Logo" class="logo">
+                <h1>🅽🅾️🆃 🅻🅸🅺🅴.🆄🆂</h1>
+            </div>
+
+            <div id="step1" class="step active">
+                <div class="rules-box">
+                    <b>[01] ACTIVITY:</b> 150 BR pts & 2500 Weekly pts.<br><br>
+                    <b>[02] SOCIAL:</b> Must team up with guild mates.<br><br>
+                    <b>[03] TRAINING:</b> Daily (Except Sat Wars).<br><br>
+                    <b>[04] COMBAT:</b> Alok/K + Passive only. NO SONIA.<br><br>
+                    <b>[05] CONDUCT:</b> Respect admins. No toxic behavior.<br><br>
+                    <b>[06] WARS:</b> No Ranked during Guild War times.<br><br>
+                    <b>[07] EXPULSION:</b> Rule violation = Instant Kick.
+                </div>
+                <label class="checkbox-container">
+                    <input type="checkbox" id="consent"> I ACCEPT THE GUILD PROTOCOLS
+                </label>
+                <button class="btn" onclick="nextStep()">ENTER FORM</button>
+            </div>
+
+            <div id="step2" class="step">
+                <div class="input-group">
+                    <label>Player Name (IGN)</label>
+                    <input type="text" id="ign" placeholder="Your Name">
+                </div>
+                <div class="input-group">
+                    <label>Free Fire UID</label>
+                    <input type="number" id="uid" placeholder="3038790506">
+                </div>
+                <div class="input-group">
+                    <label>Current Level</label>
+                    <input type="number" id="level" placeholder="e.g. 70">
+                </div>
+                <div class="input-group">
+                    <label>Previous Guild</label>
+                    <input type="text" id="prev" placeholder="Where did you come from?">
+                </div>
+                <button class="btn" onclick="sendToAdmin()">INITIATE MESSAGE</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function nextStep() {
+            if(!document.getElementById('consent').checked) {
+                alert("Accept the protocols first!");
+                return;
+            }
+            document.getElementById('step1').classList.remove('active');
+            document.getElementById('step2').classList.add('active');
+        }
+
+        function sendToAdmin() {
+            const num = "2348148333847";
+            const ign = document.getElementById('ign').value;
+            const uid = document.getElementById('uid').value;
+            const lvl = document.getElementById('level').value;
+            const prev = document.getElementById('prev').value || "None";
+
+            if(!ign || !uid || !lvl) { alert("Data incomplete!"); return; }
+
+            const msg = `*--- RECRUITMENT LOG ---*%0A` +
+                        `*STATUS:* VERIFIED✅%0A` +
+                        `*IGN:* ${ign}%0A` +
+                        `*UID:* ${uid}%0A` +
+                        `*LVL:* ${lvl}%0A` +
+                        `*PREV:* ${prev}%0A` +
+                        `-----------------------%0A` +
+                        `_I am ready to join NOT LIKE US._`;
+            
+            window.open(`https://wa.me/${num}?text=${msg}`, '_blank');
+        }
+    </script>
+</body>
+</html>
