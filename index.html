@@ -124,12 +124,6 @@
             font-family: 'Rajdhani', sans-serif;
         }
 
-        input[type="file"] {
-            border: 1px dashed var(--accent);
-            padding: 5px;
-            font-size: 0.8rem;
-        }
-
         input:focus { border-color: var(--accent); outline: none; }
 
         .btn {
@@ -204,10 +198,6 @@
                     <label>Previous Guild</label>
                     <input type="text" id="prev" placeholder="Where did you come from?">
                 </div>
-                <div class="input-group">
-                    <label>Upload Profile Screenshot</label>
-                    <input type="file" id="ss" accept="image/*">
-                </div>
                 <button class="btn" onclick="sendToAdmin()">SUBMIT & CHAT</button>
             </div>
         </div>
@@ -229,10 +219,8 @@
             const uid = document.getElementById('uid').value;
             const lvl = document.getElementById('level').value;
             const prev = document.getElementById('prev').value || "None";
-            const ss = document.getElementById('ss').value;
 
             if(!ign || !uid || !lvl) { alert("Data incomplete!"); return; }
-            if(!ss) { alert("Please select your profile screenshot first!"); return; }
 
             const msg = `*--- RECRUITMENT LOG ---*%0A` +
                         `*STATUS:* VERIFIED✅%0A` +
@@ -241,11 +229,9 @@
                         `*LVL:* ${lvl}%0A` +
                         `*PREV:* ${prev}%0A` +
                         `-----------------------%0A` +
-                        `*ATTENTION:* I am now attaching my Profile Screenshot below...%0A` +
-                        `-----------------------%0A` +
                         `_I am ready to join NOT LIKE US._`;
             
-            alert("Application ready! Now paste/attach your screenshot in the WhatsApp chat.");
+            alert("Application ready! Redirecting to WhatsApp...");
             window.open(`https://wa.me/${num}?text=${msg}`, '_blank');
         }
     </script>
